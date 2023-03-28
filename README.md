@@ -1,4 +1,4 @@
-# # Assignment: Add Two Numbers
+# Assignment: Add Two Numbers
 
 In this assignment, you will implement a C function to add two numbers.
 
