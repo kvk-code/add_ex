@@ -1,0 +1,24 @@
+name: test1
+
+on: [push]
+
+jobs:
+  build:
+    name: Autograding
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Set up GCC
+        uses: egor-tensin/setup-gcc@v1
+        with:
+          version: latest
+      
+      - name: Compile program
+        run: gcc -o test_add_numbers main.c add_numbers.c
+      
+      - name: Run test
+        run: ./test_add_numbers
+        timeout-minutes: 3
+      
+      - uses: education/autograding@v1
