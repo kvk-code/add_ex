@@ -1,0 +1,13 @@
+{
+  "tests": [
+    {
+      "name": "test1",
+      "setup": "gcc -o test_add_numbers main.c add_numbers.c",
+      "run": "./test_add_numbers",
+      "output": "The sum of 5 and 7 is 12",
+      "comparison": "exact",
+      "timeout": 3,
+      "points": 10
+    }
+  ]
+}
